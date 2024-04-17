@@ -13,7 +13,7 @@ let
     #"Z5COMMAST/DSI_Y_Z5COMMAST_Q061" = Z5COMMAST{[Id="Z5COMMAST/DSI_Y_Z5COMMAST_Q061V4"]}[Data],
     #"Added Items" = Cube.Transform(#"Z5COMMAST/DSI_Y_Z5COMMAST_Q061",
         {
-            {Cube.ApplyParameter, "[!V000001]", {{"[0PROFIT_CTR                   TS01TS_PCTR].[TS010000070061]"}}},
+            {Cube.ApplyParameter, "[!V000001]", {{"[0PROFIT_CTR                   TS01TS_PCTR].[TS0100000"&ProfitCenter&"]"}}},
             {Cube.ApplyParameter, "[!V000003]", {"001."&StartingYear, "0"&PreviousMonthNumber&"."&CurrentYear}},
             {Cube.AddAndExpandDimensionColumn, "[0COSTCENTER]", {"[0COSTCENTER].[LEVEL01]"}, {"Cost Center.Cost Center Level 01"}},
             {Table.AddColumn, "Cost Center.Cost Center Level 01.Key (Not Compounded)", each Cube.AttributeMemberProperty([Cost Center.Cost Center Level 01], "[80COSTCENTER]")},
